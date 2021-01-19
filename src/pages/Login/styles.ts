@@ -6,6 +6,12 @@ export const Container = styled.View`
     align-items:center;
     justify-content:center;
 `;
+export const Logo = styled.Image`
+    width: 120px;
+    height: 77px;
+    margin-bottom: 50px;
+    resize-mode:contain;
+`;
 export const Label = styled.Text`
     width: 300px;
     text-align: left;
