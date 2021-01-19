@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/bin/node /usr/share/yarn/bin/yarn.js add @types/styled-components/native -D
+  /usr/bin/node /usr/share/yarn/bin/yarn.js add @expo-google-fonts/Dosis
 
 PATH: 
   /home/cancio/Android/Sdk/emulator:/home/cancio/bin:/usr/local/bin:/home/cancio/.zinit/polaris/bin:/home/cancio/Android/Sdk/emulator:/home/cancio/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/cancio/Android/Sdk:/home/cancio/Android/Sdk/platform-tools:/home/cancio/Android/Sdk/extras/google/instantapps:/home/cancio/Android/Sdk/tools:/home/cancio/Android/Sdk/platform-tools:/home/cancio/Android/Sdk:/home/cancio/Android/Sdk/platform-tools:/home/cancio/Android/Sdk/extras/google/instantapps:/home/cancio/Android/Sdk/tools:/home/cancio/Android/Sdk/platform-tools
@@ -14,8 +14,8 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@types%2fstyled-components/native: Request "https://registry.yarnpkg.com/@types%2fstyled-components/native" returned a 405
-      at Request.params.callback [as _callback] (/usr/share/yarn/lib/cli.js:66997:18)
+  Error: https://registry.yarnpkg.com/@expo-google-fonts%2fDosis: Not found
+      at Request.params.callback [as _callback] (/usr/share/yarn/lib/cli.js:66988:18)
       at Request.self.callback (/usr/share/yarn/lib/cli.js:140749:22)
       at Request.emit (events.js:198:13)
       at Request.<anonymous> (/usr/share/yarn/lib/cli.js:141721:10)
@@ -51,6 +51,7 @@ npm manifest:
       "@types/react-dom": "~16.9.8",
       "@types/react-native": "~0.63.2",
       "@types/styled-components": "^5.1.7",
+      "@types/styled-components-react-native": "^5.1.0",
       "typescript": "~4.0.0"
     },
     "private": true
@@ -1799,7 +1800,7 @@ Lockfile:
     dependencies:
       "@types/react" "^16"
   
-  "@types/react-native@~0.63.2":
+  "@types/react-native@*", "@types/react-native@~0.63.2":
     version "0.63.45"
     resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.63.45.tgz#944a471d1e40e22eb8eae4369db7facf697c545e"
     integrity sha512-HvsHe8hbcAuZJKcqUEN+E/qV1TNjL6venNUiQvDi7d1IlEK6ZyTrpIS937PwiNWc3UePNzR0xZ++aqpMAJqz1A==
@@ -1835,7 +1836,16 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-1.0.1.tgz#0a851d3bd96498fa25c33ab7278ed3bd65f06c3e"
     integrity sha512-l42BggppR6zLmpfU6fq9HEa2oGPEI8yrSPL3GITjfRInppYFahObbIQOQK3UGxEnyQpltZLaPe75046NOZQikw==
   
-  "@types/styled-components@^5.1.7":
+  "@types/styled-components-react-native@^5.1.0":
+    version "5.1.0"
+    resolved "https://registry.yarnpkg.com/@types/styled-components-react-native/-/styled-components-react-native-5.1.0.tgz#58c3e58d53c789f71dfbd7396ec8f2f4ec5f169b"
+    integrity sha512-aUAikzt1d8FGgGbybBUgwcjIEhzE98kK3SXx3Zg7hhJMln4jtkvGddBj91uQmBqFCLb+4ox6EoFI02xOcs48yQ==
+    dependencies:
+      "@types/react" "*"
+      "@types/react-native" "*"
+      "@types/styled-components" "*"
+  
+  "@types/styled-components@*", "@types/styled-components@^5.1.7":
     version "5.1.7"
     resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-5.1.7.tgz#3cd10b088c1cb1acde2e4b166b3e8275a3083710"
     integrity sha512-BJzPhFygYspyefAGFZTZ/8lCEY4Tk+Iqktvnko3xmJf9LrLqs3+grxPeU3O0zLl6yjbYBopD0/VikbHgXDbJtA==
