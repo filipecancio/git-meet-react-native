@@ -17,6 +17,7 @@ export const Label = styled.Text`
     text-align: left;
     color: #00B1E9;
     font-size: 20px;
+    font-family:'Dosis_400Regular';
 `;
 export const Input = styled.TextInput`
     background-color: #FFFFFF;
@@ -24,6 +25,7 @@ export const Input = styled.TextInput`
     height: 50px;
     border-radius: 10px;
     font-size: 20px;
+    font-family:'Dosis_400Regular';
     padding: 10px;
     margin: 5px;
 `;
@@ -41,4 +43,5 @@ export const Submit = styled.TouchableOpacity`
 export const Subtitle = styled.Text`
     color: #FFFFFF;
     font-size: 20px;
+    font-family:'Dosis_400Regular';
 `;
