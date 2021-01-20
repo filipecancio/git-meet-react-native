@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/bin/node /usr/share/yarn/bin/yarn.js add @expo-google-fonts/Dosis
+  /usr/bin/node /usr/share/yarn/bin/yarn.js add @react-navigation
 
 PATH: 
   /home/cancio/Android/Sdk/emulator:/home/cancio/bin:/usr/local/bin:/home/cancio/.zinit/polaris/bin:/home/cancio/Android/Sdk/emulator:/home/cancio/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/cancio/Android/Sdk:/home/cancio/Android/Sdk/platform-tools:/home/cancio/Android/Sdk/extras/google/instantapps:/home/cancio/Android/Sdk/tools:/home/cancio/Android/Sdk/platform-tools:/home/cancio/Android/Sdk:/home/cancio/Android/Sdk/platform-tools:/home/cancio/Android/Sdk/extras/google/instantapps:/home/cancio/Android/Sdk/tools:/home/cancio/Android/Sdk/platform-tools
@@ -14,8 +14,8 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@expo-google-fonts%2fDosis: Not found
-      at Request.params.callback [as _callback] (/usr/share/yarn/lib/cli.js:66988:18)
+  Error: https://registry.yarnpkg.com/@react-navigation: Request "https://registry.yarnpkg.com/@react-navigation" returned a 405
+      at Request.params.callback [as _callback] (/usr/share/yarn/lib/cli.js:66997:18)
       at Request.self.callback (/usr/share/yarn/lib/cli.js:140749:22)
       at Request.emit (events.js:198:13)
       at Request.<anonymous> (/usr/share/yarn/lib/cli.js:141721:10)
@@ -37,7 +37,9 @@ npm manifest:
       "eject": "expo eject"
     },
     "dependencies": {
+      "@expo-google-fonts/dosis": "^0.1.0",
       "expo": "~40.0.0",
+      "expo-app-loading": "^1.0.1",
       "expo-status-bar": "~1.0.3",
       "react": "16.13.1",
       "react-dom": "16.13.1",
@@ -1102,6 +1104,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.7.5.tgz#77211291c1900a700b8a78cfafda3160d76949ed"
     integrity sha512-OWORNpfjMsSSUBVrRBVGECkhWcULOAJz9ZW8uK9qgxD+87M7jHRcvh/A96XXNhXTLmKcoYSQtBEX7lHMO7YRwg==
   
+  "@expo-google-fonts/dosis@^0.1.0":
+    version "0.1.0"
+    resolved "https://registry.yarnpkg.com/@expo-google-fonts/dosis/-/dosis-0.1.0.tgz#708e89d0380b0085c049517b60acf7fa5cb01439"
+    integrity sha512-GwH+8L/KpCjnchoO9PpkuitIo+Kp60VU1Cf8TKh+k2vJyHrj9cmQCk2tFWdHIzMJAUmmRi0MBUMeDdSeXkGxRg==
+  
   "@expo/babel-preset-cli@0.2.18":
     version "0.2.18"
     resolved "https://registry.yarnpkg.com/@expo/babel-preset-cli/-/babel-preset-cli-0.2.18.tgz#136acf8a0efe259e29ebc614b68552e5acb47d86"
@@ -1156,6 +1163,23 @@ Lockfile:
       resolve-from "^5.0.0"
       semver "7.3.2"
       slugify "^1.3.4"
+  
+  "@expo/configure-splash-screen@0.3.1":
+    version "0.3.1"
+    resolved "https://registry.yarnpkg.com/@expo/configure-splash-screen/-/configure-splash-screen-0.3.1.tgz#a55b52718751907fd3fbaeb76dbd4162d282fa13"
+    integrity sha512-Wf9U8OYoIQojYjTuXgtTqDmlA4SdSEEQo9PxnVKuF8224FtJoYX1Kwc6kiVKc/4suplrqE71ZVJXOE2Uyh4SHw==
+    dependencies:
+      "@react-native-community/cli-platform-android" "^4.10.0"
+      "@react-native-community/cli-platform-ios" "^4.10.0"
+      color-string "^1.5.3"
+      commander "^5.1.0"
+      core-js "^3.6.5"
+      deep-equal "^2.0.3"
+      fs-extra "^9.0.0"
+      lodash "^4.17.15"
+      pngjs "^5.0.0"
+      xcode "^3.0.0"
+      xml-js "^1.6.11"
   
   "@expo/configure-splash-screen@0.3.2":
     version "0.3.2"
@@ -3050,6 +3074,13 @@ Lockfile:
       snapdragon "^0.8.1"
       to-regex "^3.0.1"
   
+  expo-app-loading@^1.0.1:
+    version "1.0.1"
+    resolved "https://registry.yarnpkg.com/expo-app-loading/-/expo-app-loading-1.0.1.tgz#a2ef73235c5dd0a99c0319ad9d3f4d278237564c"
+    integrity sha512-qgsystchwMHep43YMAMHJAD5bRUikolQpb1d+ySWF4ZFTtNInmLAPqiBcVSey5taRuHD3cAvEijx3wc0W/HfVw==
+    dependencies:
+      expo-splash-screen "0.8.1"
+  
   expo-application@~2.4.1:
     version "2.4.1"
     resolved "https://registry.yarnpkg.com/expo-application/-/expo-application-2.4.1.tgz#f8eb4a3a05a0b8a8f38f2e981f587a815945b685"
@@ -3130,6 +3161,13 @@ Lockfile:
     version "9.3.0"
     resolved "https://registry.yarnpkg.com/expo-secure-store/-/expo-secure-store-9.3.0.tgz#b716d5d115cc50a34037d1afef84fe4b8ea0745c"
     integrity sha512-dNhKcoUUn+1kmEfFVxSU7h+YsqODqlExZQJcQgxgeiuCeeDvJWkE10t3jjrO6aNfrdM5i/X2l3oh401EDslWsQ==
+  
+  expo-splash-screen@0.8.1:
+    version "0.8.1"
+    resolved "https://registry.yarnpkg.com/expo-splash-screen/-/expo-splash-screen-0.8.1.tgz#de4a018c82af879eeaa9b697013ef37d9567453a"
+    integrity sha512-7NQo8OgkfQ4sv4mIHE58fkiQTGyl5dOP70uAUTb5YXC/QUsHIqEpKQ6ZXDpkLU1cbZ32c8Vtok4r2FRIUrzxcg==
+    dependencies:
+      "@expo/configure-splash-screen" "0.3.1"
   
   expo-sqlite@~8.5.0:
     version "8.5.0"

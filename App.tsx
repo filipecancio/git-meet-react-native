@@ -1,7 +1,7 @@
 
 import React from 'react';
-import Login from './src/pages/Login';
-import { AppLoading } from 'expo';
+import HomeStack from './src/routes/HomeStack';
+import AppLoading from 'expo-app-loading';
 import { useFonts,Dosis_400Regular,Dosis_700Bold } from '@expo-google-fonts/dosis';
 
 export default function App() {
@@ -13,7 +13,7 @@ export default function App() {
   if(!fontsLoaded){
     return <AppLoading />;
   }else{
-    return <Login />;
+    return <HomeStack />;
   }
 }
 
